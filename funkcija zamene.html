@@ -1,0 +1,14 @@
+<script>
+novax=8;
+novay=0
+zx= [9, 10, 11, 12];
+zy= [1,2,3,4];
+
+for(i=zx.length-1; i>=1; i--){
+    zx[i]=zx[i-1];
+    zy[i]=zy[i-1]
+}
+zx[0]=novax;
+zy[0]=novay;
+console.log(zx,zy)
+</script>

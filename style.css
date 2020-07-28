@@ -1,0 +1,100 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+:root {
+    --sirina: 21;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+#kontejner{
+    background-color: burlywood;
+    display: grid;
+    width: 100vmin;
+    height: 100vmin;
+    grid-template-rows: repeat(var(--sirina), 1fr);
+    grid-template-columns: repeat(var(--sirina), 1fr);    
+}
+.zmija{
+    border: .25vmin solid black;
+    background-color: hsl(200, 100%, 50%);
+}
+.hrana{
+    border: .25vmin solid black;
+    background-color: hsl(50, 100%, 50%);
+    background-image: url("jagoda.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#kraj{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0 , 0.5);
+    transition: all 0.5s;
+}
+#kraj button{
+width: 100%;
+height: 100%;
+color: white;
+background-color: #2196F3;
+border: 0;
+outline: 0;
+font-size: 20px;
+margin: 5px;
+box-sizing: content-box;
+}
+#kraj button:hover, #kraj button:active{
+    border: 0;
+    outline: 0;
+    background: #0b7dda;
+    cursor: pointer;
+}
+#ikonica{
+    position: absolute;
+    right: 0px;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    opacity: .4;
+    cursor: pointer;
+    transition: all .5s;
+}
+#ikonica:hover{
+    opacity: 1;
+}
+#podesavanja{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: 0px;
+    z-index: 2;
+    display: grid;
+    background-color: coral;
+    transition: all .5s;
+    overflow: hidden;
+}
+#podesavanja input{
+    width:500px;
+}
+#rezultat {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    font-size: 30px;
+}

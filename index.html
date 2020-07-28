@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zmija</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="kraj">
+        <button id="nova" onclick="nova()">Izgubili ste! Klinite ovde za novu igru</button>
+    </div>
+    <div id="podesavanja">
+        <div class="slidecontainer" id="prvi">
+            <span id="jj"> Širina : </span>
+            <span id="sirina_ispis"></span>
+            <input type="range" min="10" max="50" value="21" class="slider" id="sirina">
+        </div>
+          <div class="slidecontainer" id="drugi">
+            <span> Brzina : </span>
+            <span id="brzina_ispis"></span>
+            <input type="range" min="0.5" max="20" value="5" step="0.5" class="slider" id="brzina">
+          </div>
+          <button onclick="zatvoripodesavanja()">Završi</button>
+    </div>
+    <div id="kontejner">
+    </div>
+    <img id="ikonica" src="ikonica.png" onclick="podesavanja()" />
+    <div id="rezultat"></div>
+</body>
+</html>
